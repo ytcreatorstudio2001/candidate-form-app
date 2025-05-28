@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Submission Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; background-color: #f4f4f4; }
+        form { background: #fff; padding: 20px; border-radius: 8px; width: 300px; margin: auto; box-shadow: 0 0 10px #ccc; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #28a745; color: white; padding: 10px; border: none; cursor: pointer; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center;">Candidate Submission</h2>
+    <form action="/submit" method="POST">
+        <input type="text" name="name" placeholder="Candidate Name" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="aadhaar" placeholder="Aadhaar Number" required>
+        <select name="recruiter" required>
+            <option value="" disabled selected>Select Recruiter</option>
+            <option value="Recruiter1">Recruiter 1</option>
+            <option value="Recruiter2">Recruiter 2</option>
+            <option value="Recruiter3">Recruiter 3</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
