@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 DB_NAME = "database.db"
@@ -46,4 +47,5 @@ def submit():
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)
